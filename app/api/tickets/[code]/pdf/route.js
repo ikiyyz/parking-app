@@ -10,7 +10,7 @@ export async function GET(request, { params }) {
             `
       SELECT id, ticket_code, entry_time
       FROM public.tickets
-      WHERE ticket_code = $a1
+      WHERE ticket_code = $1
       LIMIT 1
       `,
             [code]
